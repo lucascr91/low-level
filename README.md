@@ -4,4 +4,4 @@ Olá, meu nome é Lucas e este é meu blog sobre Rust. Este blog é um espaço d
 
 Seguem os links para os posts:
 
-[Como escrever um módulo do Python em Rust](https://lucascr91.github.io/crustacea/rust2pythonmodule)
+[Como escrever um módulo do Python em Rust](https://lucascr91.github.io/crustacea/rust2pythonmodule) (25/06/2021)

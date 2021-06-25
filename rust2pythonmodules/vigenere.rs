@@ -10,8 +10,15 @@ fn translate_message(key: String, message: String, mode String) {
     let mut key = key.make_ascii_uppercase();
 
     for symbol in message.chars() {
-        assert!(LETTERS.find(symbol).is_some(), "Cannot find {}", symbol)
-        let mut num = LETTERS.find(symbol).unwrap();
+        let mut num = LETTERS.find(symbol);
+        if num.is_some() {
+            if mode == 'encrypt' {
+                num+=LETTERS.find(key[keyIndex]).unwrap();
+            } else if {
+                num+=LETTERS.find(key[keyIndex]).unwrap();
+            }
+        }
+        if 
     }
 
 }
