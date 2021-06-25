@@ -10,3 +10,13 @@ def my_sum(numbers:list):
 	else:
 		return numbers[0]
 ```
+
+Usando o módulo `timeit`, eu obtive os seguintes valores na minha máquina para listas com 50, 100 e 200 números:
+
+| Tamanho da lista 	| my_sum 	| np.sum 	|
+|------------------	|--------	|--------	|
+| 50               	| 1.07   	| 0.67   	|
+| 100              	| 2.84   	| 0.93   	|
+| 10000            	| 7.68   	| 1.46   	|
+
+
