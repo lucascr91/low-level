@@ -36,6 +36,8 @@ A Cifra de César é uma cifra de sustituição simples que consiste em substitu
 Segue implementação do algoritmo de Vigenère em Python:
 
 ```python
+import sys
+
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  
 def translateMessage(key, message, mode):
@@ -67,8 +69,7 @@ def translateMessage(key, message, mode):
     return ''.join(translated)
 
 myKey = 'PIZZA'
-myMessage = "We do not learn, and that what we call learning is only a process of recollection."
-
+myMessage = sys.argv[1]
 myMode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
 
 translated = translateMessage(myKey, myMessage, myMode)
