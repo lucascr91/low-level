@@ -15,6 +15,7 @@ def my_sum(numbers:list):
 Usando o módulo `timeit`, eu obtive os seguintes valores na minha máquina para listas com 50, 100 e 200 números:
 
 #### Diferença de performance entre np.sum e função definida pelo usuário
+
 | Tamanho da lista 	| my_sum 	| np.sum 	|
 |------------------	|--------	|--------	|
 | 50               	| 1.07   	| 0.67   	|
