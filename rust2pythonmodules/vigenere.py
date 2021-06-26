@@ -1,5 +1,3 @@
-import sys
-
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  
 def translateMessage(key, message, mode):
@@ -31,7 +29,8 @@ def translateMessage(key, message, mode):
     return ''.join(translated)
 
 myKey = 'PIZZA'
-myMessage = sys.argv[1]
+myMessage = "We do not learn, and that what we call learning is only a process of recollection."
+
 myMode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
 
 translated = translateMessage(myKey, myMessage, myMode)
