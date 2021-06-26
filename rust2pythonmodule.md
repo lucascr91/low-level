@@ -20,7 +20,7 @@ Usando o módulo `timeit`, eu obtive os seguintes valores na minha máquina para
 |------------------	|--------	|--------	|
 | 50               	| 1.07   	| 0.67   	|
 | 100              	| 2.84   	| 0.93   	|
-| 10000            	| 7.68   	| 1.46   	|
+| 200            	| 7.68   	| 1.46   	|
 
 Notas: Valores em segundos nas colunas 2 e 3. O código para replicação do experimento encontra-se no repositório do blog.
 
