@@ -2,8 +2,6 @@
 
 26/06/2021
 
-![alt text](/images/embrulho.jpg)
-
 ## Introdução
 
 Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender o conceito de *error handling* in Rust, vamos fazer um tour agora sobre esse conceito e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.

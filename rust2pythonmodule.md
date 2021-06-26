@@ -1,8 +1,6 @@
 # Como escrever um módulo do Python em Rust
 25/06/2021
 
-![alt text](/images/gokuvegeta.jpg)
-
 ## Introdução
 
 Você já deve ter percebido que muitas funções e métodos em Python têm uma performance muito melhor do que funções definidas pelo usuário. Um exemplo é a função `np.sum`, do módulo `numpy`. Veja como essa função se compara com `my_sum`, uma função definida por mim:
