@@ -151,7 +151,7 @@ version = "0.13.2"
 features = ["extension-module"]
 ```
 
-Agora implementamos o código da Cigra de Vigenère em Rust no arquivo `lib.rs`. Mas note que agora o código tem algumas alterações para assegurar que as funções ppossam lidar com input e output do Python:
+Agora implementamos o código da Cifra de Vigenère em Rust no arquivo `lib.rs`. Mas note que agora o código tem algumas alterações para assegurar que as funções ppossam lidar com input e output do Python:
 
 ```rust
 use pyo3::prelude::*;
