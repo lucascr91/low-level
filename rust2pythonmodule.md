@@ -123,5 +123,6 @@ fn translate_message(key: &str, message: &str, mode: &str) -> String {
 }
 ```
 
+## Implementando o código em Rust como um módulo do Python
 
-
+### Continua ...
