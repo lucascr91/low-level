@@ -240,7 +240,7 @@ Aparentemente, nossa função em Rust é mais de 50% mais rápida que nossa fun�
 
 ## Conclusão
 
-Bom, achei muito divertido escrever esse post e aprendi bastante. Escrever módulos do Python com performance melhor foi uma das principais razões que me incentivaram a estudar *system languages*. Parece que a diversão de verdade ocorre em baixo-nível. Naturalmente, fiquei com muitas dúvidas já que o procedimento como um todo envolve muitos conceitos diferentes. Por exemplo, como faço para adicionar esse pacote ao PyPi (gerenciador de módulos do Python)? Como faço para usar o pacote fora da pasta `release`? A resposta para essa pergunta parece ser "só colocar o arquivo `vigen.so` na pasta onde quer importar o arquivo". Pode ser, mas parece pouco prático.
+Bom, achei muito divertido escrever esse post e aprendi bastante. Escrever módulos do Python com performance melhor foi uma das principais razões que me incentivaram a estudar *system languages*. Parece que a diversão de verdade ocorre em baixo-nível. Naturalmente, fiquei com muitas dúvidas já que o procedimento como um todo envolve muitos conceitos diferentes. Por exemplo, como faço para adicionar esse pacote ao PyPi (gerenciador de módulos do Python)? Como faço para usar o pacote fora da pasta `release`? A resposta para essa pergunta parece ser "só colocar o arquivo `vigen.so` na pasta onde quer importar o arquivo". Pode ser, mas parece pouco prático. Outra dúvida é o termo `#[pyfunction]` no código do arquivo `lib.rs`, isto é decorator?
 
 Por hoje é isso. Obrigado pela leitura.
 
