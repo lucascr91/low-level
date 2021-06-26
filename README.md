@@ -8,4 +8,4 @@ Seguem os links para os posts:
 
 [Como escrever um módulo do Python em Rust](https://lucascr91.github.io/crustacea/rust2pythonmodule) (25/06/2021)
 
-[O que significa unwrap em Rust?](https://lucascr91.github.io/crustacea/optionwrap.md) (26/06/2021)
+[O que significa unwrap em Rust?](https://lucascr91.github.io/crustacea/optionwrap) (26/06/2021)
