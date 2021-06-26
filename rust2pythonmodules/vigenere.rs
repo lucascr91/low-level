@@ -14,7 +14,6 @@ fn translate_message(key: &str, message: &str, mode: &str) -> String {
         let index_letter = LETTERS.find(symbol.to_uppercase().collect::<Vec<_>>()[0]);
         match index_letter {
             Some(mut num) => {
-                // num = num.wrap();
                 if mode == "encrypt" {
                     num+=LETTERS.find(key.chars().nth(key_index).unwrap()).unwrap();
                 } else if mode == "decrypt" {

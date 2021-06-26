@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Você já deve ter percebido que muitas funções e métodos em Python têm uma performance muito melhor do que funções definidas pelo usuário. Um exemplo é o método `np.sum`, do módulo `numpy`. Veja como essa função se compara com `my_sum`, uma função definida por mim:
+Você já deve ter percebido que muitas funções e métodos em Python têm uma performance muito melhor do que funções definidas pelo usuário. Um exemplo é a função `np.sum`, do módulo `numpy`. Veja como essa função se compara com `my_sum`, uma função definida por mim:
 
 ```python
 def my_sum(numbers:list):
