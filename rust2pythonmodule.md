@@ -29,7 +29,7 @@ Neste post, vou mostrar como escrever um módulo do Python em Rust. Além desta 
 
 ## A cifra de Vigenère
 
-A Cifra de Vigenère é um algoritmo de criptografia que consiste na generalização da Cifra de César. Vou explicar brevemente o conceito da cifra, sem me estender. Uma explicação completa você pode encontrar no capítulo 18 do livro [Cracking Codes with Python](http://inventwithpython.com/cracking/chapter18.html) de onde tirei o código.
+A Cifra de Vigenère é um algoritmo de criptografia que consiste na generalização da Cifra de César. Vou explicar brevemente o conceito da cifra, sem me estender. Uma explicação completa você pode encontrar no capítulo 18 do livro [Cracking Codes with Python](http://inventwithpython.com/cracking/chapter18.html) de onde tirei o código em Python.
 
 A Cifra de César é uma cifra de sustituição simples que consiste em substituir cada letra de uma mensagem por seu equivalente em um alfabeto deslocado por N casas, onde N é a chave da cifra. Por exemplo, meu nome "Lucas" na Cifra César com chave 5 fica "Qzhfx". A Cifra de Vigenère é similar à Chave de César, com a diferença que a chave de cada letra é uma variável dada pelo valor númerico da letra correspondente em uma palavra chave. Parece confuso, mas, novamente, um exemplo mostra como é simples. Meu nome na Cifra de Vigenère com chave PIZZA é "Acbzs". Note que A é a letra que encontramos depois de 15 deslocamentos a partir de "L". A chave 15 foi obtida pois "P" de "PIZZA" é 15ª letra do alfabeto.
 
