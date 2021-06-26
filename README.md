@@ -1,6 +1,6 @@
 ### HOME
 
-![alt text](https://github.com/lucascr91/crustacea/blob/main/crustacea.jpg)
+![alt text](https://github.com/lucascr91/crustacea/blob/main/images/crustacea.jpg)
 
 Olá, meu nome é Lucas e este é meu blog sobre Rust. Este blog é um espaço de *learning in public*, isto é, eu uso o blog como ferramenta de aprendizado. Nesse espírito, além das postagens terem conteúdos que acredito que já assimilei e posso ensinar, os leitores também vão poder acompanhar minha evolução ao lerem minhas dúvidas que sempre registro nas conclusões dos posts.
 
