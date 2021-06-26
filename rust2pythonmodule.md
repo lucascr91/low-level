@@ -214,10 +214,10 @@ cargo build --release
 Para testar nosso módulo basta trocar o nome do arquivo `libvigen.so` para `vigen.so` na pasta `vigen/target/release`, navegar até essa pasta e abrir uma REPL do Python:
 
 ```python
-In [1]: from vigen import *
-In [2]: message = "We do not learn, and that what we call learning is only a process of recollection."
-In [3]: translate_message("PIZZA", message, "encrypt")
-Out[3]: 'Lm cn ndb kdagv, zmd ipzs wwis ve rikk ltiqmico hr octx z pgwbdsh we qerwkkerbhnn.'
+from vigen import *
+message = "We do not learn, and that what we call learning is only a process of recollection."
+translate_message("PIZZA", message, "encrypt")
+'Lm cn ndb kdagv, zmd ipzs wwis ve rikk ltiqmico hr octx z pgwbdsh we qerwkkerbhnn.'
 ```
 
 Funciona perfeitamente!
@@ -225,22 +225,22 @@ Funciona perfeitamente!
 Uma breve comparação da diferença de performance entre a função usando Python puro e Rust pode ser feita usando o módulo `timeit` novamente. Para isso, crie uma cópia de `vigenere.py` em `vigen/target/release`, remova o que não se relaciona diretamente coma definição da função e rode no REPL:
 
 ```python
-In [1]: import vigenere
-In [2]: import vigen
-In [3]: from timeit import timeit
-In [4]: message = "We do not learn, and that what we call learning is only a process of recollection."
-In [5]: params = { 'number' : 100000, 'globals': globals() }
-In [6]: timeit( 'vigen.translate_message("PIZZA", message, "encrypt")', **params)
-Out[6]: 2.6793487409995578
-In [7]: timeit( 'vigenere.translateMessage("PIZZA", message, "encrypt")', **params)
-Out[7]: 4.19886307699926
+import vigenere
+import vigen
+from timeit import timeit
+message = "We do not learn, and that what we call learning is only a process of recollection."
+params = { 'number' : 100000, 'globals': globals() }
+timeit( 'vigen.translate_message("PIZZA", message, "encrypt")', **params)
+2.6793487409995578
+timeit( 'vigenere.translateMessage("PIZZA", message, "encrypt")', **params)
+4.19886307699926
 ```
 
 Aparentemente, nossa função em Rust é mais de 50% mais rápida que nossa função escrita em Python puro.
 
 ## Conclusão
 
-Bom, achei muito divertido escrever esse post e aprendi bastante. Escrever módulos do Python com performance melhor foi uma das principais razões que me incentivaram a estudar *system languages*. Parece que a diversão de verdade ocorre em baixo-nível. Naturalmente, fiquei com muitas dúvidas já que o procedimento como um todo envolve muitos conceitos diferentes. Por exemplo, como faço para adicionar esse pacote ao PiPy (gerenciador de módulos do Python)? Como faço para usar o pacote fora da pasta `release`? A resposta para essa pergunta parece ser "só colocar o arquivo `vigen.so` na pasta onde quer importar o arquivo". Pode ser, mas parece pouco prático.
+Bom, achei muito divertido escrever esse post e aprendi bastante. Escrever módulos do Python com performance melhor foi uma das principais razões que me incentivaram a estudar *system languages*. Parece que a diversão de verdade ocorre em baixo-nível. Naturalmente, fiquei com muitas dúvidas já que o procedimento como um todo envolve muitos conceitos diferentes. Por exemplo, como faço para adicionar esse pacote ao PyPi (gerenciador de módulos do Python)? Como faço para usar o pacote fora da pasta `release`? A resposta para essa pergunta parece ser "só colocar o arquivo `vigen.so` na pasta onde quer importar o arquivo". Pode ser, mas parece pouco prático.
 
 Por hoje é isso. Obrigado pela leitura.
 
