@@ -13,7 +13,7 @@ A primeira coisa a entender sobre erros em Rust é que existem dois tipos de err
 | tipo/macro 	| Result<T,E> 	|      panic!     	|
 | Interrompe 	| run time    	| compile time    	|
 
-O método `unwrap` é usado no contexto de erros recuperáveis, que aplicam o enumerável `Result<T,E>`. Enumeráveis são chamados simplesmente de `Enums` em Rust e são estruturas que permitem o usuário definir um tipo de objeto enumerando suas variantes. Por exemplo, podemos criar um Enum chamada State em que cada variante é um estado que já morei na vida:
+O método `unwrap` é usado no contexto de erros recuperáveis, que aplicam o enumerável `Result<T,E>`. Enumeráveis são chamados simplesmente de `Enums` em Rust e são estruturas que permitem o usuário definir um tipo de objeto enumerando suas variantes. Por exemplo, podemos criar um Enum chamado State em que cada variante é um estado que já morei na vida:
 
 ```rust
 enum State {
