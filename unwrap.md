@@ -46,7 +46,7 @@ enum Result<T, E> {
 
 Note que, assim como em `State`, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de obter o valor correspondente ao resultado e, caso contrário, gostaríamos de obter a mensagem de erro. 
 
-Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8` chama-se `get_value`:
+Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8` chama-se `get_value` e é definida abaixo:
 
 ```rust
 fn main() {
