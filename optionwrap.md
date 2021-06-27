@@ -2,8 +2,6 @@
 
 26/06/2021
 
-## Introdução
-
 Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender o conceito de *error handling* in Rust, vamos fazer um tour agora sobre esse conceito e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
 
 ## Error handling
@@ -44,7 +42,7 @@ enum Option<T> {
 }
 ```
 
-Onde T significa "um tipo qualquer de objeto conhecido". Note que também podemos usar o *match* para `Option`, já que ele é apenas um caso específico de Enum. Por exemplo, nós podemos criar uma função que tem como input uma `Option<&str>`, ou seja, uma Option com uma slice de string como tipo e retorna a versão capitalizada da string, caso uma string seja usada e `None` caso não tenha string:
+Onde T significa "um tipo qualquer de objeto conhecido". Note que também podemos usar o *match* para `Option`, já que ele é apenas um caso específico de Enum. Por exemplo, nós podemos criar uma função que tem como input uma `Option<&str>`, ou seja, uma Option com uma slice de string como tipo e retorna a versão capitalizada da string, caso uma string seja usada e `None` caso o input seja `None`:
 
 ```rust
 fn name_upper(name:Option<&str>) -> Option<String> {
