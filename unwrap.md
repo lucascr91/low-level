@@ -2,7 +2,7 @@
 
 26/06/2021
 
-Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender os conceitos de *error handling*, `Enum` e *pattern matching* em Rust. Claro, um tratamento completo de cada um desses conceitos não caberia aqui. Por essa razão mostro apenas o que é necessário para entendermos o `unwrap`.
+Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que, oras? Bom, para entender esse método é preciso entender os conceitos de *error handling*, `Enum` e *pattern matching* em Rust. Claro, um tratamento completo de cada um desses conceitos não caberia aqui. Por essa razão mostro apenas o que é necessário para entendermos o `unwrap`.
 
 Vamos falar então breve e resumidamente sobre esses conceitos e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
 
@@ -24,7 +24,7 @@ enum State {
 }
 ```
 
-Enums têm muitas propriedades e um tratamento completo pode ser encontrado [aqui](https://doc.rust-lang.org/book/ch06-00-enums.html). Para os propósitos desse post o importante é entender como os Enums se relacionam com um *flow operator* do Rust chamado de *match*. O *match* basicamente roda um código com base em qual variante do Enum foi observada. Por exemplo, posso criar uma função que retorna quantos anos eu morei em cada um dos estados do Enum State:
+Enums têm muitas propriedades e um tratamento completo pode ser encontrado [aqui](https://doc.rust-lang.org/book/ch06-00-enums.html). Para os propósitos desse post o importante é entender como os Enums se relacionam com um *flow operator* do Rust chamado de *match*. No contexto de enumeráveis, o *match* roda um código com base em qual variante do Enum foi observada. Por exemplo, posso criar uma função que retorna quantos anos eu morei em cada um dos estados do Enum State:
 
 ```rust
 fn years(state: State) -> i32 {
@@ -44,9 +44,9 @@ enum Result<T, E> {
 }
 ```
 
-Note que, assim como em `State`, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de obter o valor correspondente ao resultado e, caso contrário, gostaríamos de interromper a compilação. 
+Note que, assim como em `State`, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de obter o valor correspondente ao resultado e, caso contrário, gostaríamos de obter a mensagem de erro. 
 
-Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8`, tem a seguinte forma:
+Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8` chama-se `get_value`:
 
 ```rust
 fn main() {
