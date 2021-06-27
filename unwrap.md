@@ -65,7 +65,7 @@ fn get_value(emoji: Vec<u8>) -> String {
 
 Nossa função `get_value` irá retornar uma string quando o código do emoji corresponder a um caracter e um erro, caso contrário.
 
-Ora, se uma função que retorna um Enum do tipo Result sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código anterior poder ser escrito de forma muito mais simples:
+Ora, se uma função que retorna um Enum do tipo Result sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado, isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código anterior poder ser escrito de forma muito mais simples:
 
 ```rust
 fn main() {
