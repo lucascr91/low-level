@@ -2,9 +2,9 @@
 
 26/06/2021
 
-Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender os conceitos de *error handling* e Enum em Rust. Vamos falar brevemente sobre esses conceitos e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
+Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender os conceitos de *error handling*, `Enum` e *pattern matching* em Rust. Vamos falar brevemente sobre esses conceitos e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
 
-## Error handling
+## Error handling, Enums e *pattern matching*
 
 A primeira coisa a entender sobre erros em Rust é que existem dois tipos de erros: recuperáveis e não-recuperáveis. Segue uma tabela resumindo a diferença entre os dois:
 
@@ -42,7 +42,7 @@ enum Result<T, E> {
 }
 ```
 
-Note que, assim como em State, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de ter obtero valor correspondente ao resultado e, caso contrário, gostaríamos de interromper a compilação. 
+Note que, assim como em `State`, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de obter o valor correspondente ao resultado e, caso contrário, gostaríamos de interromper a compilação. 
 
 Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8`, tem a seguinte forma:
 
@@ -72,6 +72,8 @@ fn main() {
     prinln!("{}", heart)
 }
 ```
+
+## Conclusão
 
 Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro. E o que acontece quando por trás do embrulho existe um erro? Diferentemente da nossa função `get_value`, o `unwrap`, através da macro `panic!`, chama um erro irrecuperável quando encontro um erro e, assim, interrompe a compilação.
 
