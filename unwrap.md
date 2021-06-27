@@ -13,7 +13,7 @@ A primeira coisa a entender sobre erros em Rust é que existem dois tipos de err
 | tipo/macro 	| Result<T,E> 	|      panic!     	|
 | Interrompe 	| run time    	| compile time    	|
 
-O método `unwrap` é usado no contexto de erros recuperáveis, que aplicam o enumerável Result<T,E>. Enumeráveis são chamados simplesmente de `Enums` em Rust e são estruturas que permitem o usuário definir um tipo de objeto enumerando suas variantes. Por exemplo, podemos criar um Enum chamada State em que cada variante é um estado que já morei na vida:
+O método `unwrap` é usado no contexto de erros recuperáveis, que aplicam o enumerável `Result<T,E>`. Enumeráveis são chamados simplesmente de `Enums` em Rust e são estruturas que permitem o usuário definir um tipo de objeto enumerando suas variantes. Por exemplo, podemos criar um Enum chamada State em que cada variante é um estado que já morei na vida:
 
 ```rust
 enum State {
@@ -29,6 +29,29 @@ fn years(state: State) -> i32 {
     match state {
         minasgerais => 26,
         saopaulo => 4
+    }
+}
+```
+
+O `Result` é um enumerável como o `State` e suas variantes são `Ok(T)` e `Err(E)` em que `T` é o tipo da variável que retorna quando a função roda sem erros e `E` é o erro que retorna caso a função não tenha sucesso. Essa é a assinatura do Enum `Result`:
+
+```rust
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+```
+
+Note que, assim como em State, podemos usar o *match* para criar uma função que nos retorne um valor para cada variante de `Result`. Em particular, se a função rodar corretamente, gostaríamos de ter obtero valor correspondente ao resultado e, caso contrário, gostaríamos de interromper a compilação. 
+
+Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8`, tem a seguinte forma:
+
+```rust
+fn get_value(emoji: Vec<i32>) -> String {
+    let heart = String::from_utf8(emoji);
+    match heart {
+        Ok(value) => value,
+        Err(error) => error,
     }
 }
 ```
