@@ -47,17 +47,33 @@ Note que, assim como em State, podemos usar o *match* para criar uma função qu
 Vamos ilustar esse exemplo com o método `from_utf8` que converte um vetor de bytes em uma `String`. Como pode ser visto na [documentação](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8), esse método retorna um Enum do tipo Result. Nossa função para usar o método `from_utf8`, tem a seguinte forma:
 
 ```rust
-fn get_value(emoji: Vec<i32>) -> String {
+fn main() {
+    let example = vec![240, 159, 146, 150];
+    println!("{}", get_value(example))
+}
+
+fn get_value(emoji: Vec<u8>) -> String {
     let heart = String::from_utf8(emoji);
     match heart {
         Ok(value) => value,
-        Err(error) => error,
+        Err(error) => error.to_string(),
     }
 }
 ```
 
+Nossa função `get_value` irá retornar uma string quando o código do emoji corresponder a um caracter e um erro, caso contrário.
 
+Ora, se uma função que retorna um Enum do tipo Result sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código anterior poder ser escrito de forma muito mais simples:
 
+```rust
+fn main() {
+    let example = vec![240, 159, 146, 150];
+    let heart = String::from_utf8(example).unwrap();
+    prinln!("{}", heart)
+}
+```
+
+Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro. E o que acontece quando por trás do embrulho existe um erro: Diferentemente da nossa função `get_value`, o `unwrap`, através da macro `panic!`, chama um erro irrecuperável quando encontro um erro e, assim, interrompe a compilação.
 
 
 
