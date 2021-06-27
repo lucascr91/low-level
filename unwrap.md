@@ -2,7 +2,9 @@
 
 26/06/2021
 
-Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender os conceitos de *error handling*, `Enum` e *pattern matching* em Rust. Vamos falar brevemente sobre esses conceitos e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
+Quando comecei a aprender Rust uma das coisas que achava mais estranhas era o método `unwrap`. Eu via isso em todos os códigos e simplesmente não sabia o que significava. A traduação de "wrap" é embrulho, então "unwrap" é algo como "desembrulhar". Desembrulhar o que oras? Bom, para entender esse método é preciso entender os conceitos de *error handling*, `Enum` e *pattern matching* em Rust. Claro, um tratamento completo de cada um desses conceitos não caberia aqui. Por essa razão mostro apenas o que é necessário para entendermos o `unwrap`.
+
+Vamos falar então breve e resumidamente sobre esses conceitos e, ao final do post, a gente volta no `unwrap` para entender o que, afinal, estamos desembrulhando.
 
 ## Error handling, Enums e *pattern matching*
 
