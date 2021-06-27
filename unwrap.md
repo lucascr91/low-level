@@ -73,7 +73,7 @@ fn main() {
 }
 ```
 
-Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro. E o que acontece quando por trás do embrulho existe um erro: Diferentemente da nossa função `get_value`, o `unwrap`, através da macro `panic!`, chama um erro irrecuperável quando encontro um erro e, assim, interrompe a compilação.
+Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro. E o que acontece quando por trás do embrulho existe um erro? Diferentemente da nossa função `get_value`, o `unwrap`, através da macro `panic!`, chama um erro irrecuperável quando encontro um erro e, assim, interrompe a compilação.
 
 
 
