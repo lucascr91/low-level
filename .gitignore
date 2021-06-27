@@ -2,3 +2,4 @@ update_repo.sh
 darlene.rs
 example
 option.md
+rust2pythonmodules/vigen/target/*
