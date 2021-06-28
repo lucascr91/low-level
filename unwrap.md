@@ -70,7 +70,7 @@ fn get_value(emoji: Vec<u8>) -> String {
 }
 ```
 
-Nossa função `get_value` irá retornar uma string quando o código do emoji corresponder a um caracter e um erro, caso contrário.
+Nossa função `get_value` irá retornar um caracter quando o código do emoji corresponder a um caracter e um erro, caso contrário.
 
 É possível fazer um exemplo análogo para o `Option`. Considere a função `from_u32` que, a partir de um valor numérico, retorna o caracter correspndente em Unicode. Como pode ser vistos na [documentação](https://docs.rs/rustc-std-workspace-std/1.0.1/std/char/fn.from_u32.html) essa função retorna um `Option<char>`. Vamos criar uma função auxiliar que retorna o valor da `Option` se ele existir e, caso o contrário, imprima uma mensagem avisando o usuário que o código requerido não existe em Unicode:
 
