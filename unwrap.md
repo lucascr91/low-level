@@ -99,6 +99,8 @@ fn main() {
 }
 ```
 
+O caso para o `Option` é análogo.
+
 ## Conclusão
 
 Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro ou nada. O problema do `unwrap` é que ele é muito silencioso. Uma parte do nosso código pode não estar retornando nada e a gente não perceber por causa do `unwrap`. Existem outras formas de lidar com `Option` quando a gente está menos certo do `output`, mas esse é um tema para outro post.
