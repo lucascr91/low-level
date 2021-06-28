@@ -72,9 +72,24 @@ fn get_value(emoji: Vec<u8>) -> String {
 
 Nossa função `get_value` irá retornar uma string quando o código do emoji corresponder a um caracter e um erro, caso contrário.
 
-É possível fazer um exemplo análogo para o `Option`. Considere a função `from_u32` que, a partir de um valor numérico, retorna o caracter correspndente em Unicode. Como pode ser vistos na [documentação](https://docs.rs/rustc-std-workspace-std/1.0.1/std/char/fn.from_u32.html) essa função retorna
+É possível fazer um exemplo análogo para o `Option`. Considere a função `from_u32` que, a partir de um valor numérico, retorna o caracter correspndente em Unicode. Como pode ser vistos na [documentação](https://docs.rs/rustc-std-workspace-std/1.0.1/std/char/fn.from_u32.html) essa função retorna um `Option<char>`. Vamos criar uma função auxiliar que retorna o valor da `Option` se ele existir e, caso o contrário, imprima uma mensagem avisando o usuário que o código requerido não existe em Unicode:
 
-Ora, se uma função que retorna um Enum do tipo Result sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado, isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código anterior poder ser escrito de forma muito mais simples:
+```rust
+fn main() {
+    let number: u32 = 97;
+    println!("{}", get_value(number))
+}
+
+fn get_value(code: u32) -> String {
+    let carac = std::char::from_u32(code);
+    match carac {
+        Some(value) => format!("The unicode of {} is {}", value, code),
+        None => format!("I cannot find a caracter with code {}", code),
+    }
+}
+```
+
+Novamente, nossa função `get_value` faz algo parecido com o que vimos para o `Result`. Mas, se uma função que retorna um Enum do tipo Result ou Option sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado, isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código do Result, visto acima, poder ser escrito de forma muito mais simples:
 
 ```rust
 fn main() {
@@ -86,7 +101,7 @@ fn main() {
 
 ## Conclusão
 
-Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro. E o que acontece quando por trás do embrulho existe um erro? Diferentemente da nossa função `get_value`, o `unwrap`, através da macro `panic!`, chama um erro irrecuperável quando encontra um erro e, assim, interrompe a compilação.
+Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro ou nada. O problema do `unwrap` é que ele é muito silencioso. Uma parte do nosso código pode não estar retornando nada e a gente não perceber 
 
 
 
