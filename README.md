@@ -10,4 +10,4 @@ Seguem os links para os posts:
 
 [O que significa unwrap em Rust?](https://lucascr91.github.io/crustacea/unwrap) (26/06/2021)
 
-[# O que significa o método "?" em Rust?](https://lucascr91.github.io/crustacea/questionmark) (05/07/2021)
+[O que significa o método "?" em Rust?](https://lucascr91.github.io/crustacea/questionmark) (05/07/2021)
