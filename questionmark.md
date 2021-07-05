@@ -26,6 +26,6 @@ fn get_value(emoji: Vec<u8>) -> Result<String, std::string::FromUtf8Error> {
 ```
 Note que, diferentemente da implementação do `unwrap` que vimos no post anterior, dessa vez o `unwrap` não é feito na função `String::from_utf8(emoji)`. Em vez disso, o erro é propagado por `?` e precisamos usar o `unwrap` só quando usamos a função `get_value`.
 
-## Qual a vantagem do método da propagação de erro?
+## Qual a vantagem do método de propagação de erro?
 
 Não está claro para mim a resposta dessa pergunta. Ao que parece, a vantagem seria concentrar a gestão de erros em uma parte específica do código. Por exemplo, você cria várias funções utilizando a propagação de erro e usa métodos como `unwrap` e `expect` apenas quando de fato for usar essas funções.
