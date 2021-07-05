@@ -7,5 +7,7 @@ Olá, meu nome é Lucas e este é meu blog sobre Rust. Este blog é um espaço d
 Seguem os links para os posts:
 
 [Como escrever um módulo do Python em Rust](https://lucascr91.github.io/crustacea/rust2pythonmodule) (25/06/2021)
+
 [O que significa unwrap em Rust?](https://lucascr91.github.io/crustacea/unwrap) (26/06/2021)
+
 [# O que significa o método "?" em Rust?](https://lucascr91.github.io/crustacea/questionmark) (05/07/2021)
