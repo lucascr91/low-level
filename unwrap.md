@@ -41,7 +41,7 @@ enum Result<T, E> {
 
 E essa é a assinatura do `Option`:
 
-```
+```rust
 enum Option<T> {
     Some(T),
     None,
@@ -84,12 +84,14 @@ fn get_value(code: u32) -> String {
     let carac = std::char::from_u32(code);
     match carac {
         Some(value) => format!("The unicode of {} is {}", value, code),
-        None => format!("I cannot find a caracter with code {}", code),
+        None => panic!("I cannot find a caracter with code {}", code),
     }
 }
 ```
 
-Novamente, nossa função `get_value` faz algo parecido com o que vimos para o `Result`. Mas, se uma função que retorna um Enum do tipo Result ou Option sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado, isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código do Result, visto acima, poder ser escrito de forma muito mais simples:
+Novamente, nossa função `get_value` faz algo parecido com o que vimos para o `Result`. 
+
+Mas, se uma função que retorna um Enum do tipo Result ou Option sempre precisa desse tipo de "tratamento" antes que a gente possa finalmente acessar o valor, não seria melhor ter isso pronto na forma de um método? Como você já deve ter advinhado, isso é exatamente o que o método `unwrap` faz. Usando o `unwrap`, o código do Result, visto acima, poder ser escrito de forma muito mais simples:
 
 ```rust
 fn main() {
@@ -103,7 +105,7 @@ O caso para o `Option` é análogo.
 
 ## Conclusão
 
-Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro ou nada. O problema do `unwrap` é que ele é muito silencioso. Uma parte do nosso código pode não estar retornando nada e a gente não perceber por causa do `unwrap`. Existem outras formas de lidar com `Option` quando a gente está menos certo do `output`, mas esse é um tema para outro post.
+Então é isso: o `unwrap` é um método para desembrulhar um resultado que poderia ser um erro ou nada. Se a função não tem sucesso, retornando um erro ou nada, então o `unwrap` chama a macro `panic!`, interrompendo a compilação.
 
 
 
