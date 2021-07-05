@@ -1,4 +1,4 @@
-# O que significa o método "?" em Rust?
+# O que significa ponto de interrogação em Rust?
 
 05/07/2021
 
