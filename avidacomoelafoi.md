@@ -54,7 +54,7 @@ No caminho pensava toda sorte de amenidades de modo que não pude esconder a sur
 
 -“Alfredo anda muito só”—disse Elizabeth que agora saía da cozinha com uma pequena cesta de biscoitos. “Vamos Roberto, sente-se conosco. A casa é sua!”. Depois dessa última frase Elizabeth deu uma risada sonora, como sempre faz quando está nervosa. Riu assim a vida toda. É desespero
 
-- “Infelizmente, não tenho muito tempo. Preciso pegar um documento.”
+-“Infelizmente, não tenho muito tempo. Preciso pegar um documento.”
 
 Poderia ter dado um escândalo, mas obviamente Elizabeth não estava a altura de me fazer perder a compostura. Mas certamente foi capaz de me despertar um moderado desequilíbrio. Um mundo de pensamentos invadiu minha mente. “O Alfredo! Puta que o pariu!”. Não podia acreditar. Há muito tempo desconfiava de Elizabeth. Nossa relação era das piores imagináveis e ela vivia de xingos e reclamações. Mas um dia ela melhorou. Sorriu. E seus risos de desespero ficaram menos frequentes. “Aí tem coisa”, pensei. Mas não quis investigar. “O Alfredo! O Alfredo!”. Poderia ter visto isso desde o início. Não podia tomar o valor de face daquela esquisitice toda. Achava que era só um paspalho qualquer.
 
@@ -62,8 +62,8 @@ Ao chegar no jornal avistei o preto com cara de um cachorro com rabo entre as pe
 
 Foi com essa cabeça em turbilhão que decidi escrever o editorial que selaria meu destino. O editorial é conhecido por todos, mas reproduzo aqui para que os senhores possam julgá-lo à luz do contexto:
     
-*Eu acuso!
-*
+*Eu acuso!*
+
 *Não escapa a nenhum observador atento a vagarosa, porém contínua degeneração moral do Ocidente. Em toda parte nossas instituições estão a ruir a olhos vistos, mas é na moral que nossa falência coletiva é mais patente. Os sintomas vão desde o virtual desaparecimento da hierarquia nas relações individuais ao descalabro dos infinitos gêneros.*
 
 *O sucesso material e espiritual do Ocidente não se deve, como pensam alguns, à pura diligência de uma classe burguesa. Na verdade, é nos parâmetros morais mais belos representados pelas virtudes canônicas ensinadas pela igreja que devemos encontrar as raízes do nosso êxito. E é perdendo essa base moral que pavimentamos o caminho para o fim da sociedade como conhecemos.*
@@ -84,5 +84,3 @@ Surpresa com a pergunta, a funcionária que atendeu Elizabeth se limitou a indic
 E foi aí que eu ri. Finalmente eu ri. Um riso de morte, derradeiro. Mas ainda sim um riso!
 
 “Elaine, você tem é nojo!”
-
-\clearpage
