@@ -16,5 +16,5 @@ Seguem os links para os posts:
 
 # Literatura
 
-[A vida como ela foi (conto)](https://lucascr91.github.io/low-level/avidacomoelafoi) (segundo semestre de 2017)
+[A vida como ela foi](https://lucascr91.github.io/low-level/avidacomoelafoi) (segundo semestre de 2017)
 
