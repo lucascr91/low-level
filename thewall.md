@@ -6,15 +6,15 @@ The standard answer for this line of reasoning, drawn from Marxists and Freudian
 
 Better than description is an example. Here a folkloric song common in capoeira circles in the 1920s:
 
-“O negro é burro de carga 
-O branco é inteligente 
-O branco só não trabalha 
-Porque preto não é gente.” 
+“O negro é burro de carga <br>
+O branco é inteligente <br>
+O branco só não trabalha <br>
+Porque preto não é gente.” <br>
 
-“Quem diz que preto se cansa 
-Não tem boa opinião 
-Se trabalha o dia inteiro 
-De noite inda faz serão.”
+“Quem diz que preto se cansa <br>
+Não tem boa opinião <br>
+Se trabalha o dia inteiro <br>
+De noite inda faz serão.”<br>
 
 The cultural standards produced by this perverse logic are not unrelated to our existence as subjects. Some have argued that all of us have some kind of ideal ego, a being that is a projection of ourselves in the future that we strive every day to become. This ideal ego, however, is just a person build according to the "image and likeness" of our culturally-made values.  As noted by Neusa Santos, the implication of this psychological model for the racial question in Brazil is that every black person has a white being as the ideal ego. One of the most moving examples showed by Santos in his classical book is the story of a black woman who gradually develops a rejection for her own body, as time passed by this rejection grows in strength and she becomes even unable to face the mirror.
 
