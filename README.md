@@ -6,7 +6,7 @@ Olá, este é meu blog pessoal. Trata-se de um blog não temático. Isso signifi
 
 Seguem os links para os posts:
 
-## Computação
+# Computação
 
 [Como escrever um módulo do Python em Rust](https://lucascr91.github.io/low-level/rust2pythonmodule) (25/06/2021)
 
