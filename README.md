@@ -18,7 +18,7 @@ Seguem os links para os posts:
 
 [A vida como ela foi](https://lucascr91.github.io/low-level/avidacomoelafoi) (segundo semestre de 2017)
 
-# Essays
+# Textos de opinião e ensaios
 
 [The wall](https://lucascr91.github.io/low-level/thewall) (segundo semestre de 2020)
 
