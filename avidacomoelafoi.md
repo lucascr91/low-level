@@ -1,4 +1,4 @@
-### A vida como ela foi
+# A vida como ela foi
 
 Você pode imaginar minha surpresa quando Alfredo me disse entre lágrimas contidas que sua doce mulher, Camila, havia falecido. Depois de um aneurisma, Camila havia sido internada na UTI do hospital local onde permanecia desde março. Não era, de modo algum, uma idosa. Do alto de seus 42 anos Camila não esbanjava saúde, mas o mal súbito surpreendeu a todos. “E o Manoel?”, “Está tão arrasado como um garoto na idade dele pode estar. Também perdi minha mãe cedo, ele se recupera.” O café havia acabado e precisava voltar para o jornal, Alfredo, como de hábito, se ofereceu para pagar a conta e perguntou se eu não queria mais alguma coisa.
 
