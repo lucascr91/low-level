@@ -1,12 +1,34 @@
 ---
 ---
 
-@import 'jekyll-theme-minimal';
+@import "jekyll-theme-minimal";
 
-.inner {
-  max-width: 75%;
+.page-header {
+  background-color: #34657F;
+  background-image: linear-gradient(#34657F, #34657F);
 }
 
 .main-content {
-  background-color: red;
+  background-color: #333f48;
+  text-align:center;
+  max-width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #ffffff;
+  }
+
+  table {
+    th {
+      color: #ffffff;
+    }
+    th,
+    td {
+      color: #ffffff;
+    }
+  }
 }
