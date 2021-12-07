@@ -1,8 +1,9 @@
 ---
 ---
 
-@import "{{ jekyll-theme-minimal }}";
+{@import "{{ site.theme }}";
 
 .inner {
-  $max-width:25%;
+  max-width: 75%;
+}
 }
